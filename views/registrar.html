@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        label, input, button { display: block; margin-top: 10px; }
+        input, button { width: 200px; padding: 10px; }
+        .message { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Cadastrar</h1>
+    <div class="message"></div>
+    <script>
+        // Função para ler os parâmetros da URL
+        function getQueryString() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const msg = urlParams.get('msg');
+            if (msg) {
+                document.querySelector('.message').textContent = decodeURIComponent(msg);
+            }
+        }
+        getQueryString();
+    </script>
+    <form action="/api/auth/registrar" method="POST">
+        <label for="username">Nome de usuário:</label>
+        <input type="text" id="username" name="username" required>
+        
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required>
+        
+        <button type="submit">Registrar</button>
+    </form>
+</body>
+</html>

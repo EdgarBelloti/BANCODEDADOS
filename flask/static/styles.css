@@ -1,0 +1,83 @@
+/* Estilos gerais para o corpo do documento e alinhamento */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 60%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Estilização da tabela */
+.tabela-compras {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.tabela-compras thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.tabela-compras th,
+.tabela-compras td {
+    padding: 12px 15px;
+}
+
+.tabela-compras tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.tabela-compras tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.tabela-compras tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.tabela-compras tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
+/* Estilização dos botões */
+button {
+    background-color: #009879;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8em;
+}
+
+button:hover {
+    background-color: #007961;
+}
+
+/* Ajustes no formulário */
+form {
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: calc(100% - 22px);
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+}
